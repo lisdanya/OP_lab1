@@ -9,12 +9,15 @@ def parse_file(text):
 
 directory = 'D:\\files_for_lab\\'
 files = os.listdir(directory)
-csv = ''.join(filter(lambda x: x.endswith('.csv'), files))
-file = str(directory) + str(csv)
-handle = open(file)
-text=parse_file(handle)
-print(directory)
-print(files)
-print(file)
+csv=''.join(filter(lambda x: x.endswith('.csv'), files))
 print(csv)
-print(text)
+name=csv.split(".csv")
+for i in range(len(name)-1):
+    file = str(directory) + str(name[i]+".csv")
+    print(file)
+handle = open(file)
+# text=parse_file(handle)
+print(files)
+# print(file)
+print(csv)
+# print(text)
